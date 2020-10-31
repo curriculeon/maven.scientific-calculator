@@ -4,79 +4,95 @@ package com.github.curriculeon;
  * Created by leon on 10/31/2020.
  */ // TODO
 public class CalculatorEngine {
-    public Double add(Double firstValue, Double secondValue) {
-        return null;
+    private Computer computer;
+    private CalculatorDisplay calculatorDisplay;
+
+    public CalculatorEngine(Computer computer, CalculatorDisplay calculatorDisplay) {
+        this.computer = computer;
+        this.calculatorDisplay = calculatorDisplay;
     }
 
-    public Double subtract(Double firstValue, Double secondValue) {
-        return null;
+    public CalculatorEngine() {
+        this(new Computer(), new CalculatorDisplay());
     }
 
-    public Double multiply(Double firstValue, Double secondValue) {
-        return null;
+    public void clearDisplay() {
+
     }
 
-    public Double divide(Double firstValue, Double secondValue) {
-        return null;
+    public void computeAddition() {
+
     }
 
-    public Double inverseTangent(Double currentValue) {
-        return null;
+    public void computeSubtraction() {
+
     }
 
-    public Double inverseCosine(Double currentValue) {
-        return null;
+    public void computeMultiplication() {
+
     }
 
-    public Double inverseSine(Double currentValue) {
-        return null;
+    public void computeDivision() {
+
     }
 
-    public Double tangent(Double currentValue) {
-        return null;
+    public void computeInverseTangent() {
+
     }
 
-    public Double cosine(Double currentValue) {
-        return null;
+    public void computeInverseCosine() {
+
     }
 
-    public Double sine(Double currentValue) {
-        return null;
+    public void computeInverseSine() {
+
     }
 
-    public Double degrees(Double currentValue) {
-        return null;
+    public void computeTangent() {
+
     }
 
-    public Double radians(Double currentValue) {
-        return null;
+    public void computeCosine() {
     }
 
-    public Double binary(Double currentValue) {
-        return null;
+    public void computeSine() {
+
     }
 
-    public Double hexadecimal(Double currentValue) {
-        return null;
+    public void convertToDegrees() {
+
     }
 
-    public Double decimal(Double currentValue) {
-        return null;
+    public void convertToRadians() {
+
     }
 
-    public Double octal(Double currentValue) {
-        return null;
+    public void convertToBinaryBase() {
+
     }
 
-    public Double inverseNaturalLog(Double currentValue) {
-        return null;
+    public void convertToOctalBase() {
     }
 
-    public Double naturalLog(Double currentValue) {
-        return null;
+    public void convertToDecimalBase() {
     }
 
-    public Double inverseLog(Double currentValue) {
-        return null;
+    public void convertToHexadecimalBase() {
+
+    }
+
+    public void display() {
+
+    }
+
+    public void computeInverseNaturalLog() {
+
+    }
+
+    public void computeNaturalLog() {
+    }
+
+    public void computeLog() {
+
     }
 }

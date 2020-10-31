@@ -1,6 +1,6 @@
 package com.github.curriculeon.calculatorengine;
 
-import com.github.curriculeon.CalculatorEngine;
+import com.github.curriculeon.Computer;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,10 +10,10 @@ import org.junit.Test;
 public class MultiplyTest {
     // given
     private void test(Double firstValue, Double secondValue, Double expectedValue) {
-        CalculatorEngine calculatorEngine = new CalculatorEngine();
+        Computer computer = new Computer();
 
         // when
-        Double actualValue = calculatorEngine.multiply(firstValue, secondValue);
+        Double actualValue = computer.multiply(firstValue, secondValue);
 
         // then
         Assert.assertEquals(expectedValue, actualValue);

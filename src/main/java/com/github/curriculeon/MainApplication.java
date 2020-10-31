@@ -2,7 +2,7 @@ package com.github.curriculeon;
 
 public class MainApplication {
     public static void main(String[] args) {
-        ApplicationRunner myObject = new ApplicationRunner();
+        Calculator myObject = new Calculator();
         myObject.run();
     }
 }

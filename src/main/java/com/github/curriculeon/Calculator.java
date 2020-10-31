@@ -1,98 +1,190 @@
 package com.github.curriculeon;
 
-/**
- * Created by leon on 10/31/2020.
- */ // TODO
 public class Calculator {
-    private CalculatorEngine calculatorEngine;
-    private CalculatorDisplay calculatorDisplay;
+    private CalculatorEngine calculator = new CalculatorEngine();
 
-    public Calculator(CalculatorEngine calculatorEngine, CalculatorDisplay calculatorDisplay) {
-        this.calculatorEngine = calculatorEngine;
-        this.calculatorDisplay = calculatorDisplay;
+    public void run() {
+        IOConsole console = new IOConsole(AnsiColor.YELLOW);
+        String userInput;
+
+        loop_label: // this label allows us to break out of the loop from within the switch-case statement
+        while (true) {
+            console.println("Welcome to the calculator main-menu.");
+            console.println("From here, you can select any of the following options:");
+            String options = "[off, change-base, compute, show-display, clear-display]";
+            userInput = console.getStringInput(options);
+            switch (userInput) {
+                case "change-base":
+                    triggerChangeBaseMenuSelection();
+                    break;
+
+                case "compute":
+                    triggerComputeMenuSelection();
+                    break;
+
+                case "clear-display":
+                    calculator.clearDisplay();
+                    break;
+
+
+                case "show-display":
+                    calculator.display();
+                    break;
+
+                case "off":
+                    break loop_label;
+
+                default:
+                    console.println("Invalid input!");
+                    console.println("Please try again!");
+                    run();
+                    break;
+            }
+        }
     }
 
-    public Calculator() {
-        this(new CalculatorEngine(), new CalculatorDisplay());
+    private void triggerChangeBaseMenuSelection() {
+        IOConsole console = new IOConsole(AnsiColor.CYAN);
+        console.println("Welcome to the change-base-menu.");
+        console.println("From here, you can select any of the following options:");
+        String options = "[binary, octal, decimal, hexadecimal]";
+        String userInput = console.getStringInput(options);
+        switch (userInput) {
+            case "binary":
+                calculator.convertToBinaryBase();
+                break;
+
+            case "octal":
+                calculator.convertToOctalBase();
+                break;
+
+            case "decimal":
+                calculator.convertToDecimalBase();
+                break;
+
+            case "hexadecimal":
+                calculator.convertToHexadecimalBase();
+                break;
+
+        }
     }
 
-    public void clearDisplay() {
-
+    private void triggerComputeMenuSelection() {
+        IOConsole console = new IOConsole(AnsiColor.PURPLE);
+        console.println("Welcome to the compute-menu.");
+        console.println("From here, you can select any of the following options:");
+        String options = "[arithmetic, trigonometric, logarithmic]";
+        String userInput = console.getStringInput(options);
+        switch (userInput) {
+            case "arithmetic":
+                triggerComputeArithmetic();
+                break;
+            case "trigonometric":
+                triggerComputeTrigonometric();
+                break;
+            case "logarithmic":
+                triggerComputeLogarithmic();
+                break;
+            default:
+                console.println("Invalid input!");
+                console.println("Please try again!");
+                triggerComputeMenuSelection();
+        }
     }
 
-    public void computeAddition() {
-
+    private void triggerComputeArithmetic() {
+        IOConsole console = new IOConsole(AnsiColor.BLUE);
+        console.println("Welcome to the arithmetic-menu.");
+        console.println("From here, you can select any of the following options:");
+        String options = "[add, subtract, multiply, divide]";
+        String userInput = console.getStringInput(options);
+        switch (userInput) {
+            case "add":
+                calculator.computeAddition();
+                break;
+            case "subtract":
+                calculator.computeSubtraction();
+                break;
+            case "multiply":
+                calculator.computeMultiplication();
+                break;
+            case "divide":
+                calculator.computeDivision();
+                break;
+            default:
+                console.println("Invalid input!");
+                console.println("Please try again!");
+                triggerComputeArithmetic();
+        }
     }
 
-    public void computeSubtraction() {
 
+    private void triggerComputeTrigonometric() {
+        IOConsole console = new IOConsole(AnsiColor.GREEN);
+        console.println("Welcome to the trigonometric-menu.");
+        console.println("From here, you can select any of the following options:");
+        String options = "[sine, cosine, tangent, inverse-sine, inverse-sosine, inverse-tangent]";
+        String userInput = console.getStringInput(options);
+        switch (userInput) {
+            case "sine":
+                calculator.computeSine();
+                break;
+
+            case "cosine":
+                calculator.computeCosine();
+                break;
+
+            case "tangent":
+                calculator.computeTangent();
+                break;
+
+            case "inverse-sine":
+                calculator.computeInverseSine();
+                break;
+
+            case "inverse-cosine":
+                calculator.computeInverseCosine();
+                break;
+            case "inverse-tangent":
+                calculator.computeInverseTangent();
+                break;
+
+            case "radians":
+                calculator.convertToRadians();
+
+            case "degrees":
+                calculator.convertToDegrees();
+
+            default:
+                console.println("Invalid input!");
+                console.println("Please try again!");
+                triggerComputeTrigonometric();
+        }
     }
 
-    public void computeMultiplication() {
+    private void triggerComputeLogarithmic() {
+        IOConsole console = new IOConsole(AnsiColor.BLUE);
+        console.println("Welcome to the logarithmic-menu.");
+        console.println("From here, you can select any of the following options:");
+        String options = "[log, natural-log, inverse-natual-log]";
+        String userInput = console.getStringInput(options);
+        switch (userInput) {
+            case "log":
+                calculator.computeLog();
+                break;
 
-    }
+            case "natural-log":
+                calculator.computeNaturalLog();
+                break;
 
-    public void computeDivision() {
+            case "inverse-natual-log":
+                calculator.computeInverseNaturalLog();
+                break;
 
-    }
-
-    public void computeInverseTangent() {
-
-    }
-
-    public void computeInverseCosine() {
-
-    }
-
-    public void computeInverseSine() {
-
-    }
-
-    public void computeTangent() {
-
-    }
-
-    public void computeCosine() {
-    }
-
-    public void computeSine() {
-
-    }
-
-    public void convertToDegrees() {
-
-    }
-
-    public void convertToRadians() {
-
-    }
-
-    public void convertToBinaryBase() {
-
-    }
-
-    public void convertToOctalBase() {
-    }
-
-    public void convertToDecimalBase() {
-    }
-
-    public void convertToHexadecimalBase() {
-
-    }
-
-    public void display() {
-
-    }
-
-    public void computeInverseNaturalLog() {
-
-    }
-
-    public void computeNaturalLog() {
-    }
-
-    public void computeLog() {
-
+            default:
+                console.println("Invalid input!");
+                console.println("Please try again!");
+                triggerComputeLogarithmic();
+        }
     }
 }
