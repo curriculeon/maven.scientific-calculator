@@ -84,4 +84,15 @@ public class Calculator {
     public void display() {
 
     }
+
+    public void computeInverseNaturalLog() {
+
+    }
+
+    public void computeNaturalLog() {
+    }
+
+    public void computeLog() {
+
+    }
 }

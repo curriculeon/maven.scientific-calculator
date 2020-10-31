@@ -170,12 +170,15 @@ public class ApplicationRunner {
         String userInput = console.getStringInput(options);
         switch (userInput) {
             case "log":
+                calculator.computeLog();
                 break;
 
             case "natural-log":
+                calculator.computeNaturalLog();
                 break;
 
             case "inverse-natual-log":
+                calculator.computeInverseNaturalLog();
                 break;
 
             default:
