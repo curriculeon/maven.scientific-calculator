@@ -37,114 +37,114 @@ public class CalculatorEngine {
     public void computeAddition() {
         setInitialValue();
         Double valueToAdd = console.getDoubleInput("Enter a value to add to current value of [ %s ]", currentValue);
-        Double newComputedValue = computer.add(currentValue, valueToAdd);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.add(currentValue, valueToAdd);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeSubtraction() {
         setInitialValue();
         Double valueToAdd = console.getDoubleInput("Enter a value to subtract from current value of [ %s ]", currentValue);
-        Double newComputedValue = computer.subtract(currentValue, valueToAdd);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.subtract(currentValue, valueToAdd);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeMultiplication() {
         setInitialValue();
         Double valueToAdd = console.getDoubleInput("Enter a value to multiply by current value of [ %s ]", currentValue);
-        Double newComputedValue = computer.multiply(currentValue, valueToAdd);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.multiply(currentValue, valueToAdd);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeDivision() {
         setInitialValue();
         Double valueToAdd = console.getDoubleInput("Enter a value to divide current value of [ %s ] by", currentValue);
-        Double newComputedValue = computer.divide(currentValue, valueToAdd);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.divide(currentValue, valueToAdd);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeInverseNaturalLog() {
 
         setInitialValue("Enter the value to get inverse natural log of");
-        Double newComputedValue = computer.inverseNaturalLog(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.inverseNaturalLog(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeNaturalLog() {
         setInitialValue("Enter the value to get natural log of");
-        Double newComputedValue = computer.naturalLog(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.naturalLog(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeLog() {
         setInitialValue("Enter the value to get inverse log of");
-        Double newComputedValue = computer.inverseLog(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.inverseLog(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeInverseTangent() {
         setInitialValue("Enter the value to get inverse tangent of");
-        Double newComputedValue = computer.inverseTangent(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.inverseTangent(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeInverseCosine() {
         setInitialValue("Enter the value to get inverse cosine of");
-        Double newComputedValue = computer.inverseCosine(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.inverseCosine(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeInverseSine() {
         setInitialValue("Enter the value to get inverse sine of");
-        Double newComputedValue = computer.inverseSine(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.inverseSine(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeTangent() {
         setInitialValue("Enter the value to get tangent of");
-        Double newComputedValue = computer.tangent(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.tangent(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeCosine() {
         setInitialValue("Enter the value to get cosine of");
-        Double newComputedValue = computer.cosine(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.cosine(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void computeSine() {
         setInitialValue("Enter the value to get sine of");
-        Double newComputedValue = computer.sine(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.sine(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void convertToDegrees() {
-        Double newComputedValue = computer.degrees(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.degrees(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void convertToRadians() {
-        Double newComputedValue = computer.radians(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.radians(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void convertToBinaryBase() {
-        Double newComputedValue = computer.binary(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.binary(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void convertToOctalBase() {
-        Double newComputedValue = computer.octal(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.octal(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void convertToDecimalBase() {
-        Double newComputedValue = computer.decimal(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.decimal(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void convertToHexadecimalBase() {
-        Double newComputedValue = computer.hexadecimal(currentValue);
-        calculatorDisplay.updateDisplay(newComputedValue.toString());
+        Double newlyComputedValue = computer.hexadecimal(currentValue);
+        calculatorDisplay.updateDisplay(newlyComputedValue.toString());
     }
 
     public void display() {
