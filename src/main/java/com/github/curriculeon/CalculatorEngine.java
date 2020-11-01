@@ -32,8 +32,8 @@ public class CalculatorEngine {
 
     private void updateDisplay(Double newlyComputedValue) {
         calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());
-        String displayBaseMode = calculatorDisplay.getDisplayMode();
-        String displayTrigMode = calculatorDisplay.getDisplayTrigMode();
+        String displayBaseMode = calculatorDisplay.getBaseMode();
+        String displayTrigMode = calculatorDisplay.getTrigonometricMode();
         switch (displayBaseMode) {
             case "binary":
                 convertToBinaryBase();
