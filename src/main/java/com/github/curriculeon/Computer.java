@@ -54,7 +54,8 @@ public class Computer {
 
     public Double binary(Double operand) {
         int baseToConvertTo = 2;
-        String operandAsString = operand.toString();
+        Integer operandAsInteger = operand.intValue();
+        String operandAsString = operandAsInteger.toString();
         Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
         Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
         return valueInBaseTwoAsDouble;
@@ -62,7 +63,8 @@ public class Computer {
 
     public Double hexadecimal(Double operand) {
         int baseToConvertTo = 16;
-        String operandAsString = operand.toString();
+        Integer operandAsInteger = operand.intValue();
+        String operandAsString = operandAsInteger.toString();
         Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
         Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
         return valueInBaseTwoAsDouble;
@@ -70,7 +72,8 @@ public class Computer {
 
     public Double decimal(Double operand) {
         int baseToConvertTo = 10;
-        String operandAsString = operand.toString();
+        Integer operandAsInteger = operand.intValue();
+        String operandAsString = operandAsInteger.toString();
         Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
         Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
         return valueInBaseTwoAsDouble;
@@ -78,7 +81,8 @@ public class Computer {
 
     public Double octal(Double operand) {
         int baseToConvertTo = 8;
-        String operandAsString = operand.toString();
+        Integer operandAsInteger = operand.intValue();
+        String operandAsString = operandAsInteger.toString();
         Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
         Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
         return valueInBaseTwoAsDouble;
