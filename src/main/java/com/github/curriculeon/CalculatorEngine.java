@@ -51,17 +51,22 @@ public class CalculatorEngine {
             default:
                 convertToDecimalBase();
         }
-        if ("radians".equalsIgnoreCase(displayTrigMode)) {
-            convertToRadians();
-        } else {
-            convertToDegrees();
+        /** // TODO enable logic
+        if (isInTrigonometryMode) {
+            if ("radians".equalsIgnoreCase(displayTrigMode)) {
+                convertToRadians();
+            } else {
+                convertToDegrees();
+            }
         }
+         */
 
         display();
     }
 
     public void clearDisplay() {
         calculatorDisplay.clearDisplayValue();
+        this.currentValue = null;
     }
 
     public void computeAddition() {

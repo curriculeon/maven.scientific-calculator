@@ -53,39 +53,26 @@ public class Computer {
     }
 
     public Double binary(Double operand) {
-        int baseToConvertTo = 2;
-        Integer operandAsInteger = operand.intValue();
-        String operandAsString = operandAsInteger.toString();
-        Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
-        Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
-        return valueInBaseTwoAsDouble;
+        return convertToBase(operand, 2);
     }
 
     public Double hexadecimal(Double operand) {
-        int baseToConvertTo = 16;
-        Integer operandAsInteger = operand.intValue();
-        String operandAsString = operandAsInteger.toString();
-        Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
-        Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
-        return valueInBaseTwoAsDouble;
+        return convertToBase(operand, 16);
     }
 
     public Double decimal(Double operand) {
-        int baseToConvertTo = 10;
-        Integer operandAsInteger = operand.intValue();
-        String operandAsString = operandAsInteger.toString();
-        Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
-        Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
-        return valueInBaseTwoAsDouble;
+        return convertToBase(operand, 10);
     }
 
     public Double octal(Double operand) {
-        int baseToConvertTo = 8;
-        Integer operandAsInteger = operand.intValue();
-        String operandAsString = operandAsInteger.toString();
-        Long valueInBaseTwoAsLong = Long.parseLong(operandAsString, baseToConvertTo);
-        Double valueInBaseTwoAsDouble = valueInBaseTwoAsLong.doubleValue();
-        return valueInBaseTwoAsDouble;
+        return convertToBase(operand, 8);
+    }
+    private Double convertToBase(Double valueToConvert, Integer baseToConvertTo) {
+        Integer valueAsInteger = valueToConvert.intValue();
+        String valueAsString = valueAsInteger.toString();
+        Long valueInTheSpecifiedBaseAsLong = Long.parseLong(valueAsString, baseToConvertTo);
+        Double valueInTheSpecifiedBaseAsDouble = valueInTheSpecifiedBaseAsLong.doubleValue();
+        return valueInTheSpecifiedBaseAsDouble;
     }
 
     public Double inverseNaturalLog(Double operand) {
