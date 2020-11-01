@@ -7,7 +7,6 @@ public class Calculator {
         IOConsole console = new IOConsole(AnsiColor.YELLOW);
         String userInput;
 
-        loop_label: // this label allows us to break out of the loop from within the switch-case statement
         while (true) {
             console.println("Welcome to the calculator main-menu.");
             console.println("From here, you can select any of the following options:");
@@ -32,7 +31,7 @@ public class Calculator {
                     break;
 
                 case "off":
-                    break loop_label;
+                    return;
 
                 default:
                     console.println("Invalid input!");
