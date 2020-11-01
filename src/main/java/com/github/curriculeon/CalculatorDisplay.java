@@ -21,9 +21,6 @@ public class CalculatorDisplay {
         return null;
     }
 
-    public void updateDisplay(String valueToDisplay) {
-    }
-
     /**
      * clear the value presented on the display
      */
@@ -66,6 +63,14 @@ public class CalculatorDisplay {
      * convert the displayed value to radians
      */
     public void switchDisplayModeToRadians() {
+    }
+
+    public String getBaseMode() {
+        return null;
+    }
+
+    public String getTrigonometricMode() {
+        return null;
     }
 
     public Boolean isDisplayModeInRadians() {
