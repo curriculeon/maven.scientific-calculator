@@ -30,17 +30,37 @@ public class CalculatorEngine {
         }
     }
 
-    public void clearDisplay() {
-        calculatorDisplay.clearDisplayValue();
+    private void updateDisplay(Double newlyComputedValue) {
+        calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());
+        String displayBaseMode = calculatorDisplay.getDisplayMode();
+        String displayTrigMode = calculatorDisplay.getDisplayTrigMode();
+        switch (displayBaseMode) {
+            case "binary":
+                convertToBinaryBase();
+                break;
+
+            case "octal":
+                convertToOctalBase();
+                break;
+
+            case "hexadecimal":
+                convertToHexadecimalBase();
+                break;
+
+            default:
+                convertToDecimalBase();
+        }
+        if("radians".equalsIgnoreCase(displayTrigMode)) {
+            convertToRadians();
+        } else {
+            convertToDegrees();
+        }
+
+        display();
     }
 
-    private void updateDisplay(Double newlyComputedValue) {
-        boolean isDisplayModeInRadians = calculatorDisplay.isDisplayModeInRadians();
-        Boolean  isDisplayModeInBinary = calculatorDisplay.isDisplayModeInBinary();
-        Boolean isDisplayModeInOctal = calculatorDisplay.isDisplayModeInOctal();
-        Boolean isDisplayModeInDecimal = calculatorDisplay.isDisplayModeInDecimal();
-        Boolean isDisplayModeInHexadecimal = calculatorDisplay.isDisplayModeInHexadecimal();
-        Boolean isDisplayModeInDegrees = calculatorDisplay.isDisplayModeInDegrees();
+    public void clearDisplay() {
+        calculatorDisplay.clearDisplayValue();
     }
 
     public void computeAddition() {
@@ -72,7 +92,6 @@ public class CalculatorEngine {
     }
 
     public void computeInverseNaturalLog() {
-
         setInitialValue("Enter the value to get inverse natural log of");
         Double newlyComputedValue = computer.inverseNaturalLog(currentValue);
         updateDisplay(newlyComputedValue);
