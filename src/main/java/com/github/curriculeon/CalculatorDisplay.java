@@ -67,4 +67,28 @@ public class CalculatorDisplay {
      */
     public void switchDisplayModeToRadians() {
     }
+
+    public Boolean isDisplayModeInRadians() {
+        return null;
+    }
+
+    public Boolean isDisplayModeInBinary() {
+        return null;
+    }
+
+    public Boolean isDisplayModeInOctal() {
+        return null;
+    }
+
+    public Boolean isDisplayModeInDecimal() {
+        return null;
+    }
+
+    public Boolean isDisplayModeInHexadecimal() {
+        return null;
+    }
+
+    public Boolean isDisplayModeInDegrees() {
+        return null;
+    }
 }
