@@ -176,7 +176,7 @@ public class Calculator {
                 calculator.computeNaturalLog();
                 break;
 
-            case "inverse-natual-log":
+            case "inverse-natural-log":
                 calculator.computeInverseNaturalLog();
                 break;
 
