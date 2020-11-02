@@ -153,42 +153,42 @@ public class CalculatorEngine {
     }
 
     public void convertToDegrees() {
-        setInitialValue("Enter the value to get cosine of");
+        setInitialValue("Enter the value to get degrees of");
         Double newlyComputedValue = computer.degrees(currentValue);
         this.currentValue = newlyComputedValue;
         calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());
     }
 
     public void convertToRadians() {
-        setInitialValue("Enter the value to get cosine of");
+        setInitialValue("Enter the value to get radians of");
         Double newlyComputedValue = computer.radians(currentValue);
         this.currentValue = newlyComputedValue;
         calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());
     }
 
     public void convertToBinaryBase() {
-        setInitialValue("Enter the value to get cosine of");
+        setInitialValue("Enter the value to get binary of");
         Double newlyComputedValue = computer.binary(currentValue);
         this.currentValue = newlyComputedValue;
         calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());
     }
 
     public void convertToOctalBase() {
-        setInitialValue("Enter the value to get cosine of");
+        setInitialValue("Enter the value to get octal of");
         Double newlyComputedValue = computer.octal(currentValue);
         this.currentValue = newlyComputedValue;
         calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());
     }
 
     public void convertToDecimalBase() {
-        setInitialValue("Enter the value to get cosine of");
+        setInitialValue("Enter the value to get decimal of");
         Double newlyComputedValue = computer.decimal(currentValue);
         this.currentValue = newlyComputedValue;
         calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());
     }
 
     public void convertToHexadecimalBase() {
-        setInitialValue("Enter the value to get cosine of");
+        setInitialValue("Enter the value to get hexadecimal of");
         Double newlyComputedValue = computer.hexadecimal(currentValue);
         this.currentValue = newlyComputedValue;
         calculatorDisplay.updateDisplayValue(newlyComputedValue.toString());

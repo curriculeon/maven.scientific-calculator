@@ -76,14 +76,15 @@ public class Computer {
     }
 
     public Double inverseNaturalLog(Double operand) {
-        return null;
+        return Math.exp(naturalLog(operand));
     }
 
     public Double naturalLog(Double operand) {
-        return null;
+        return Math.log(operand);
     }
 
+    @Deprecated
     public Double inverseLog(Double operand) {
-        return null;
+        return inverseNaturalLog(operand);
     }
 }
